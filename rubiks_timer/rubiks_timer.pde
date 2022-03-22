@@ -14,12 +14,18 @@ void draw(){
 //laver int time til millisekunder ved at konvertere framecount (60 pr sekund, til 1000 pr sekund)
   int time=startvalue+frameCount*(16+2/3);
   println(time);
+  
+//millisekunder defineres og sættes til at have 3 decimaler som vises på skærmen
   int millis=(time % 1000);
   String Millis = nf(millis, 3);
   text(Millis, 170, 50);
+  
+//sekunder defineres og sættes til at have 2 decimaler som vises på skærmen
   int sekunder=((time / 1000) % 60);
   String Sekunder = nf(sekunder, 2);
   text(Sekunder + ":", 140,50);
+  
+//minutter defineres og sættes til at have 2 decimaler som vises på skærmen
   int minutter=((time/ (1000*60)) % 60);
   String Minutter = nf(minutter, 2);
   text(Minutter + ":", 110,50);
