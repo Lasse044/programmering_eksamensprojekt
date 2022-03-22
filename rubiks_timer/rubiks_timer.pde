@@ -11,14 +11,18 @@ void setup(){
 void draw(){
 //den laver en ny baggrund efter hver iteration for at tallene ikke "stacker"
   background(225);
-  int time=startvalue+frameCount/60;
-  println(frameCount);
-  int millis=(frameCount);
-  text("millisekunder: "+millis, 100, 50);
-  int sekunder=(time % 60);
-  text("sekunder: "+sekunder, 100,100);
-  int minutter=(time/60);
-  text("minutter: "+minutter, 100,200);
+//laver int time til millisekunder ved at konvertere framecount (60 pr sekund, til 1000 pr sekund)
+  int time=startvalue+frameCount*(16+2/3);
+  println(time);
+  int millis=(time % 1000);
+  String Millis = nf(millis, 3);
+  text(Millis, 170, 50);
+  int sekunder=((time / 1000) % 60);
+  String Sekunder = nf(sekunder, 2);
+  text(Sekunder + ":", 140,50);
+  int minutter=((time/ (1000*60)) % 60);
+  String Minutter = nf(minutter, 2);
+  text(Minutter + ":", 110,50);
   
   /*
   text("sekunder: ")
