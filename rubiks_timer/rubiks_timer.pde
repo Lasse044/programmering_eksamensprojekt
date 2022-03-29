@@ -13,8 +13,8 @@ void draw(){
   background(225);
 //laver int time til millisekunder ved at konvertere framecount (60 pr sekund, til 1000 pr sekund)
   int time=startvalue+frameCount*(16+2/3);
-  println(time);
-  
+  //println(time);
+
 //millisekunder defineres og sættes til at have 3 decimaler som vises på skærmen
   int millis=(time % 1000);
   String Millis = nf(millis, 3);
@@ -30,14 +30,16 @@ void draw(){
   String Minutter = nf(minutter, 2);
   text(Minutter + ":", 110,50);
   
-  /*
-  text("sekunder: ")
+} 
+
+
+void keyPressed(){
   
-  text("sekunder: "+sekunder,100,100);
-  text("minutter: "+m,200,100);
-  if(sekunder>59){
-    frameCount=0;
-    m++;
+  if (key == 's'){
+    println("sussi");
   }
-  */
+  else if (key == 'b'){
+    println("bakki");
+  }
+  
 }
