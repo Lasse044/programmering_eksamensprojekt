@@ -79,7 +79,7 @@ void scramble() {
     }
    
   }
-  //her vises scramble-sekvensen på skærmen ved at printe hver del af arary treak ud
+  //her vises scramble-sekvensen på skærmen ved at printe hver del af array treak ud
   textSize(40);
   fill(40,90,140);
   //System.out.println(traek);
@@ -89,7 +89,7 @@ void scramble() {
   {
 //overskrift
     fill(256,0,0);
-  text("WCA STANDARD 3x3 SCRAMBLE",width/2-300,50);
+  text("WCA STANDARD 3x3 SCRAMBLE",width/2-280,50);
   fill(0);
   }
 }
