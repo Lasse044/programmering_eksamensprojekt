@@ -82,7 +82,6 @@ void scramble() {
   //her vises scramble-sekvensen på skærmen ved at printe hver del af array treak ud
   textSize(40);
   fill(40,90,140);
-  //System.out.println(traek);
   for(int i=0;i<traek.size();i++){
   text(traek.get(i),30+i*70,100);
   }
