@@ -35,7 +35,7 @@ void draw() {
   //når idletime er sand vil tiden stå stille på 0 og scramble vil være synlig
   if (idletime == true) {
     textSize(100);
-    text("00:00:000", width/2-200, height/2+80);
+    text("00:00:000", width/2-210, height/2+80);
     textSize(50);
     text("Press [S] to start timer", width/2-230, height/2-50);
     scramble();
@@ -43,14 +43,14 @@ void draw() {
   //når mystart er sand vil tiden være i gang
   if (mystart == true) {
     textSize(100);
-    text(Beregntid(), width/2-200, height/2+80);
+    text(Beregntid(), width/2-210, height/2+80);
     textSize(50);
     text("Press [SPACE] to stop timer", width/2-270, height/2-50);
   }
   //når solved er sand vil tiden fryses
   if (solved == true) {
     textSize(100);
-    text(solvetid, width/2-200, height/2+80);
+    text(solvetid, width/2-210, height/2+80);
     textSize(50);
     text("Press [R] to reset timer", width/2-230, height/2-50);
   }
@@ -62,13 +62,11 @@ void scramble() {
     tal = int(random(6));
     ens.add(tal);
     laengde++;
-    
-    
+ 
     while (ens.size() != laengde) {
       tal = int(random(6));
       ens.add(tal);
     }
-    
     temp.add(tal);
     traek.add(x[tal]+x1[int(random(3))]);
     
@@ -77,7 +75,6 @@ void scramble() {
       i++;
       laengde--;
     }
-   
   }
   //her vises scramble-sekvensen på skærmen ved at printe hver del af array treak ud
   textSize(40);
